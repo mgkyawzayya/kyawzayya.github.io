@@ -1,0 +1,538 @@
+/* Imported CSS */
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,900");
+/* End Imported CSS*/
+
+/* Default CSS*/
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  overflow-x: hidden;
+  font-size: 15px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  line-height: 1.7;
+  margin: 0;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: medium none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+  transition: 1s;
+}
+
+.cd-headline {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-headline {
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-headline {
+    font-size: 60px;
+  }
+}
+
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+
+.cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+}
+
+.cd-words-wrapper b.is-visible {
+  position: relative;
+}
+
+.no-js .cd-words-wrapper b {
+  opacity: 0;
+}
+
+.no-js .cd-words-wrapper b.is-visible {
+  opacity: 1;
+}
+
+/* xclip */
+.cd-headline.clip span {
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+.cd-headline.clip .cd-words-wrapper {
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.cd-headline.clip .cd-words-wrapper::after {
+  /* line */
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 2px;
+  height: 70%;
+  background-color: #aebcb9;
+}
+
+.cd-headline.clip b {
+  opacity: 0;
+}
+
+.cd-headline b.is-visible {
+  opacity: 1;
+}
+
+.thin-text {
+  font-weight: 300 !important;
+}
+
+.owl-carousel {
+  margin: auto;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dots .owl-dot {
+  display: inline-block;
+  width: 15px;
+  height: 10px;
+  border-radius: 20px;
+  margin-right: 20px;
+  background-color: #ddd;
+}
+
+.owl-dots .owl-dot.active {
+  background-color: #212529;
+}
+
+.owl-dots .owl-dot:last-child {
+  margin-right: 0;
+}
+
+/* End Default CSS*/
+
+/* Nav CSS */
+.navbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 9;
+  min-height: 80px;
+}
+
+.navbar .icon-bar {
+  color: #fff;
+}
+
+.navbar .navbar-nav .nav-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: #eee;
+  letter-spacing: 0.5px;
+  margin: 15px 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.navbar .navbar-nav .nav-link:after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: -5px;
+  opacity: 0;
+  left: calc(50% - 15px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.navbar .navbar-nav .active:after {
+  bottom: 0px;
+  opacity: 1;
+}
+
+.nav-scroll {
+  background: #fff;
+  -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+}
+
+.nav-scroll .icon-bar {
+  color: #222;
+}
+
+.nav-scroll .navbar-nav .nav-link {
+  color: #222;
+}
+
+.nav-scroll .navbar-nav .nav-link:after {
+  background: #222;
+}
+
+.nav-scroll .navbar-nav .navbar-brand {
+  padding: 15px 0;
+  color: #111;
+}
+
+.navbar-brand {
+  padding: 15px 0;
+  width: 100px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.navbar-brand:hover {
+  color: #fff;
+}
+
+.nav-brand {
+  color: #212529;
+}
+
+.nav-brand:hover {
+  color: #212529;
+}
+
+/* End Nav CSS */
+
+/* Intro CSS */
+#intro-area {
+  background: url(../img/company.jpg) no-repeat fixed center;
+  background-size: cover;
+  z-index: -1;
+}
+
+#intro-area .intro-drak {
+  background-color: -webkit-rgba(0, 0, 0, 0.75);
+  background-color: -o-rgba(0, 0, 0, 0.75);
+  background-color: -moz-rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  height: auto;
+}
+
+.caption-intro {
+  padding-top: 200px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+.caption-intro h4 {
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  font-weight: 300;
+}
+
+.social-intro {
+  padding-top: 50px;
+}
+
+.social-intro ul li {
+  display: inline-block;
+}
+
+.social-intro i {
+  color: #fff;
+  font-size: 17px;
+  background: rgba(0, 0, 0, 0.3);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.social-intro i:hover {
+  color: #333;
+  background: #fff;
+  transition: 1s;
+}
+
+.cta-intro {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.cta-intro a {
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  background: transparent;
+  padding: 11px 40px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+}
+
+.cta-intro a:hover {
+  background: #fff;
+  color: #333;
+  transition: 1s;
+}
+
+/* End Intro CSS 
+
+/* About CSS */
+#about-us {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.about-us-img {
+  margin-top: 20px;
+}
+
+#about-us .about-us-img img {
+  width: 100%;
+}
+
+.about-us-text {
+  padding-left: 30px;
+}
+
+.about-us-title p:nth-child(1) {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.about-us-title p:nth-child(2) {
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-top: -5px;
+}
+
+.about-us-explanation p {
+  padding-top: 25px;
+  text-align: justify;
+  color: #748182;
+  font-size: 14px;
+}
+
+.about-us-information {
+  padding-top: 40px;
+}
+
+.about-us-information-detail {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.about-us-information-detail i {
+  position: absolute;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  background: #f4f5f8;
+  text-align: center;
+}
+
+.about-us-information-detail p {
+  padding-left: 40px;
+}
+
+.about-us-information-detail ul {
+  padding-left: 40px;
+}
+
+.about-us-information-detail p:nth-child(2) {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+}
+
+.about-us-information-detail p:nth-child(3) {
+  padding-top: 0px;
+  color: #748182;
+  font-size: 14px;
+}
+
+.about-us-information-cta {
+  padding-top: 35px;
+}
+
+.about-us-information-cta a:nth-child(1) {
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  background: #212529;
+  padding: 11px 40px;
+  border-radius: 50px;
+  border: 1px solid #212529;
+  margin-right: 20px;
+}
+
+.about-us-information-cta a:nth-child(1):hover {
+  color: #212529;
+  background: transparent;
+}
+
+.about-us-information-cta a:nth-child(2) {
+  font-weight: 500;
+  font-size: 14px;
+  color: #212529;
+  background: transparent;
+  padding: 11px 40px;
+  border-radius: 50px;
+  border: 1px solid #212529;
+  margin-right: 20px;
+}
+
+.about-us-information-cta a:nth-child(2):hover {
+  color: #fff;
+  background: #212529;
+}
+
+/* End About CSS*/
+
+/* Copyright */
+#copyright {
+  background: #212529;
+  color: #fff;
+  text-align: center;
+}
+
+.copyright-detail {
+  padding: 20px 0;
+}
+
+.copyright-detail p {
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.5;
+}
+
+.copyright-detail a {
+  color: #999;
+}
+
+/* End copyright */
+
+/* Scroll Top */
+.scroll-up {
+  position: fixed;
+  bottom: 55px;
+  right: 30px;
+  color: #748182;
+  cursor: pointer;
+  z-index: 10;
+  display: none;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.scroll-up .top-one {
+  display: block;
+  height: 30px;
+  margin-bottom: 5px;
+  width: 1px;
+  background: #748182;
+  margin-left: 12px;
+}
+
+.scroll-up .top-two {
+  text-orientation: mixed;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  white-space: nowrap;
+  transform: rotate(180deg);
+}
+
+.scroll-up:hover .top-two {
+  color: #748182;
+}
+
+.scroll-up .top-three {
+  display: block;
+  height: 0px;
+  margin-bottom: 5px;
+  width: 1px;
+  background: #212529;
+  margin-left: 12px;
+}
+
+.scroll-up:hover .top-three {
+  height: 30px;
+  background: #748182;
+}
+
+.scroll-up:hover .top-one {
+  height: 0px;
+}
+
+/* End Scroll Top */
